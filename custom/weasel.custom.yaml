@@ -1,60 +1,76 @@
 patch:
   style:
-    # color_scheme: ms_sogou
-    color_scheme: ms_wechat_light
-    # color_scheme: ms_wechat_dark
+    # 选择皮肤，亮色与暗色主题
+    color_scheme: Purple-Firefly
+    color_scheme_dark: Purple-Firefly
 
-    font_face: "微软雅黑"
-    font_point: 14
-    horizontal: true
-    inline_preedit: true
-    label_font_point: 14
-    layout:
-      border: 2
-      round_corner: 0
-      margin_x: 5
-      margin_y: 5
-      hilite_padding: 5
-      hilite_spacing: 5
-      spacing: 5
-      candidate_spacing: 20
+    # 预设选项：（可被皮肤覆盖；如果皮肤没写，则默认使用这些属性。）
+    text_orientation: horizontal # horizontal | vertical
+    inline_preedit: false
+    corner_radius: 12
+    hilited_corner_radius: 12
+    border_height: 0
+    border_width: 0
+    line_spacing: 5
+    spacing: 10
+    # candidate_format: '%c. %@'
+    # base_offset: 6
+    font_face: "MiSans Demibold"
+    font_point: 20
+    # label_font_face: 'MiSans Demibold'
+    label_font_point: 18
+    # comment_font_face: 'MiSans Demibold'
+    comment_font_point: 18
 
+  # 皮肤列表
   preset_color_schemes:
-    ms_sogou:
-      name: 搜狗
-      author: Mark24Code
-      back_color: 0xFFFFFF
-      border_color: 0xFFFFFF
-      text_color: 0xD9884F
-      hilited_text_color: 0xD9884F
-      hilited_back_color: 0xFFFFFF
-      hilited_candidate_text_color: 0x0D4FE9
-      hilited_candidate_back_color: 0xFFFFFF
-      candidate_text_color: 0xD67F42
-      comment_text_color: 0xFFFFFF
-
-    ms_wechat_light:
-      name: 微信light
-      author: Mark24Code
-      back_color: 0xFFFFFF
-      border_color: 0xFFFFFF
-      text_color: 0x69AD2E
-      hilited_text_color: 0xFFFFFF
-      hilited_back_color: 0x69AD2E
-      hilited_candidate_text_color: 0xFFFFFF
-      hilited_candidate_back_color: 0x69AD2E
-      candidate_text_color: 0x69AD2E
-      comment_text_color: 0xFFFFFF
-
-    ms_wechat_dark:
-      name: 微信dark
-      author: Mark24Code
-      back_color: 0x000000
-      border_color: 0x000000
-      text_color: 0x69AD2E
-      hilited_text_color: 0xD8D8D8
-      hilited_back_color: 0x69AD2E
-      hilited_candidate_text_color: 0xD8D8D8
-      hilited_candidate_back_color: 0x69AD2E
-      candidate_text_color: 0x69AD2E
-      comment_text_color: 0xFFFFFF
+    Purple-Firefly:
+      name: Purple-Firefly
+      author: Firefly
+      font_face: "MiSans Demibold" # 候选文字字体
+      font_point: 16 # 候选文字大小
+      label_font_face: "MiSans Demibold" # 候选编号字体
+      label_font_point: 14 # 候选编号大小
+      comment_font_face: "MiSans Demibold" # 候选注解文字字体
+      comment_font_point: 16 # 候选注解文字大小
+      candidate_format: "%c\u2005%@\u2005" # 编号 %c 和候选词 %@ 前后的空间
+      candidate_list_layout: linear # 候选排布：层叠 stacked | 行 linear
+      text_orientation: horizontal # 行文向： 横 horizontal | 纵 vertical
+      horizontal: true # true横排，false竖排
+      inline_preedit: false # 拼音位于： 候选框 false | 行内 true
+      translucency: false # 磨砂： false | true
+      mutual_exclusive: false # 色不叠加： false | true
+      border_height: 1 # 外边框 高
+      border_width: 1 # 外边框 宽
+      corner_radius: 12 # 外边框 圆角半径
+      hilited_corner_radius: 12 # 选中框 圆角半径
+      surrounding_extra_expansion: 0 # 候选项背景相对大小？
+      shadow_size: 12 # 阴影大小
+      line_spacing: 5 # 行间距
+      base_offset: 0 # 字基高
+      alpha: 1 # 透明度，0~1
+      spacing: 10 # 拼音与候选项之间的距离
+      color_space: srgb # 色彩空间： srgb | display_p3
+      back_color: 0xF8D0DC # 候选条背景色，24位色值，16进制，BGR顺序
+      shadow_color: 0xEC9EA8 # 候选条窗口阴影
+      border_color: 0xF8BCCA # 候选条边框
+      text_color: 0xB4768E # 拼音等提示文字颜色
+      hilited_text_color: 0xE07693 # 第一候选拼音颜色
+      hilited_back_color: 0xEC9EA8 # 输入拼音背景色 （inline_preedit: false）
+      hilited_shadow_color: 0x47EC9EA8 # 高亮拼音背景阴影
+      hilited_mark_color: 0xB4768E # 第一候选光标颜色
+      hilited_label_color: 0xB4768E # 第一候选编号颜色
+      hilited_candidate_text_color: 0xB4768E # 第一候选文字颜色
+      hilited_comment_text_color: 0xE07693 # 第一候选注解文字颜色
+      hilited_candidate_back_color: 0xF8BCCA # 第一候选背景色
+      hilited_candidate_border_color: 0xACEC9EA8 # 第一候选边框颜色
+      hilited_candidate_shadow_color: 0xCAEC9EA8 # 第一候选背景阴影
+      label_color: 0xCF868E # 其他候选编号颜色
+      candidate_text_color: 0xCF868E # 其他候选文字颜色
+      comment_text_color: 0xCF868E # 拼音等提示文字颜色
+      candidate_back_color: 0xF8D0DC # 其他候选背景色
+      candidate_border_color: 0xACEC9EA8 # 其他候选边框颜色
+      candidate_shadow_color: 0xACEC9EA8 # 其他候选背景阴影
+      preedit_back_color: 0xF8D0DC # 拼音底色 （inline_preedit: false）
+      prevpage_color: 0xEC9EA8 # 向前翻页
+      nextpage_color: 0xEC9EA8 # 向后翻页

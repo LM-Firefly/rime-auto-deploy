@@ -1,6 +1,4 @@
-
-
-# Windows下的说明
+# Windows 下的说明
 
 不同于 MacOS、Linux 大部分的工具已经内置，亦或者系统有包管理器（方便下载软件的一种软件）可以方便安装软件。Windows 用户需要自己安装必要的软件环境。
 
@@ -12,16 +10,14 @@ Ruby 类似于 Python 是一个脚本语言。需要借助解释器工作，如�
 
 全部版本下载地址： https://rubyinstaller.org/downloads/
 
-
 也可以点击下面直接下载 Ruby 3.2.2（14.3M），选择适合你的架构版本。
 
-* [ Ruby 3.2.2-1 (x64) ](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.2-1/rubyinstaller-3.2.2-1-x64.exe)
-* [Ruby 3.2.2-1 (x86) ](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.2-1/rubyinstaller-3.2.2-1-x86.exe)
-
+- [ Ruby 3.2.2-1 (x64) ](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.2-1/rubyinstaller-3.2.2-1-x64.exe)
+- [Ruby 3.2.2-1 (x86) ](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.2-1/rubyinstaller-3.2.2-1-x86.exe)
 
 > 官网提供 Ruby + DevKit 的 RubyInstaller 适合开发者。我们暂时不需要，感兴趣的可以自行探索。
 
-####  Ruby 安装设置建议
+#### Ruby 安装设置建议
 
 1. 按照默认工作的方式进行勾选
 
@@ -31,13 +27,11 @@ Ruby 类似于 Python 是一个脚本语言。需要借助解释器工作，如�
 
 安装其实一路默认点`继续`就好了
 
-第一次打开终端，可能会有询问窗口，是否要安装开发者工具。普通用户选择 `1` 就好了。 Ruby开发者 `3` 更加合适。
+第一次打开终端，可能会有询问窗口，是否要安装开发者工具。普通用户选择 `1` 就好了。 Ruby 开发者 `3` 更加合适。
 
-![dev-chain](/images/windows/01-install-ruby/step6-dev-chain.png)
-
+![dev-chain](./images/windows/01-install-ruby/step1-install-ruby.png)
 
 2. Windows 终端设置代理
-
 
 终端执行下载任务，比如下载 `MSYS2 development toolchain` ，或者通过 git 下载代码，可能会遇到 GFW 制造的网络问题。
 
@@ -45,15 +39,14 @@ Ruby 类似于 Python 是一个脚本语言。需要借助解释器工作，如�
 
 设置代理命令，例子如下： “7890” 替换成你本地梯子的端口
 
-⚠️有的梯子需设置里要打开“局域网内允许代理”类似的设置。
+⚠️ 有的梯子需设置里要打开“局域网内允许代理”类似的设置。
+
 ```
 set http_proxy=127.0.0.1:7890
 set https_proxy=127.0.0.1:7890
 ```
 
-参考:  [windows终端命令行下如何使用代理？ ](https://github.com/shadowsocks/shadowsocks-windows/issues/1489)
-
-
+参考: [windows 终端命令行下如何使用代理？ ](https://github.com/shadowsocks/shadowsocks-windows/issues/1489)
 
 ## 02 环境安装: 安装 Git
 
@@ -64,8 +57,6 @@ set https_proxy=127.0.0.1:7890
 按照默认的设置，一路确认安装即可。
 
 ⚠️ 关注添加到 PATH 的选项，如果出现请务必勾选
-
-
 
 ## 03 下载脚本
 
@@ -81,36 +72,31 @@ set https_proxy=127.0.0.1:7890
 
 https://github.com/Mark24Code/rime-auto-deploy/releases
 
-
-
-## 04 环境安装: 安装 Rime 中州韵 
+## 04 环境安装: 安装 Rime 中州韵
 
 在这里自行下载安装 Windows 版本的 Rime 中州韵
 
 [https://rime.im/download/](https://rime.im/download/)
 
-自行安装， 务必 ⚠️采用默认路径安装。
+自行安装， 务必 ⚠️ 采用默认路径安装。
 
-![default-path](/images/windows/04-install-rime/step1-default-path.png)
-
+![default-path](./images/windows/04-install-rime/step1-default-path.png)
 
 ## 05 执行脚本
 
-⚠️可能会遇到: 正在运行的程序会无法替换配置文件夹
+⚠️ 可能会遇到: 正在运行的程序会无法替换配置文件夹
 
-执行脚本，最好排除干扰，终止Rime运行:
+执行脚本，最好排除干扰，终止 Rime 运行:
 
-* 执行中止 Rime小狼毫 的服务。
-* 或者直接在项目管理器中退出Rime小狼毫进程（推荐）。
+- 执行中止 Rime 小狼毫 的服务。
+- 或者直接在项目管理器中退出 Rime 小狼毫进程（推荐）。
 
-![stop-service](/images/windows/05-run-script/step1-quit-servce.png)
-
+![stop-service](./images/windows/05-run-script/step1-quit-servce.png)
 
 打开下载脚本目录，右击使用终端打开所在目录。
 
-![run-script](/images/windows/05-run-script/step2-open-terminal.png)
-
+![run-script](./images/windows/05-run-script/step2-open-terminal.png)
 
 执行 `ruby .\installer.rb`
 
-![success](/images/windows/05-run-script/step3-success-run.png)
+![success](./images/windows/05-run-script/step3-success-run.png)
